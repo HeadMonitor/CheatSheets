@@ -4,7 +4,7 @@
   ```bash
   script /dev/null -c bash
   ```
-
+  or
   ```bash
   python3 -c 'import pty; pty.spawn("/bin/bash")'
   ```
