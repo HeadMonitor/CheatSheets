@@ -62,6 +62,6 @@ Upon inspection we do not see anything interesting on the site.
 If we search for Subdomains by Bruteforcing, we will find `http://file.era.htb`.
 
 ```bash
-ffuf -u http://era.htb/ -w Desktop/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -H "Host: http://FUZZ.era.htb/"
+ffuf -u http://era.htb/ -w SecLists/Discovery/DNS/subdomains-top1million-5000.txt -H "Host: http://FUZZ.era.htb/"
 ```
 
