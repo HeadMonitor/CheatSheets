@@ -3,7 +3,7 @@
 <table>
   <tr>
     <td>
-      <img width="150" height="150" alt="SauIcon" src="" />
+      <img width="150" height="150" alt="SauIcon" src="https://github.com/user-attachments/assets/ffbc035e-6ca0-4a35-a7a9-dcbc44b04f7b" />
     </td>
     <td style="vertical-align: center; padding-left: 5rem;">
       <strong>Machine Difficulty:</strong> Easy <br />
@@ -99,7 +99,7 @@ Nmap done: 1 IP address (1 host up) scanned in 96.11 seconds
 
 If we put the the Machine's IP on the browser we don't get any results. So lets try specifying the unknown port as well. Bingo!
 
-<img width="1920" height="901" alt="image" src="https://github.com/user-attachments/assets/96e4b761-5393-4882-bfe8-a9819da10792" />
+<img width="1906" height="715" alt="image" src="https://github.com/user-attachments/assets/0dbb5c71-5f8a-4b39-8993-9a1ac1301cd3" />
 
 ## Website
 
@@ -109,12 +109,7 @@ A quick search will show us [**CVE-2023-27163**](https://nvd.nist.gov/vuln/detai
 
 We will first create a **New Basket**. Then we will go to **Configuration Settings** to configure our basket as follows:
 
-- **Forward URL:** http://127.0.0.1
-- [ ] Insecure TLS only affects forwarding to URLs like `https://...`
-- [x] Proxy Response
-- [x] Expand Forward Path
-
-<img width="1920" height="901" alt="image" src="https://github.com/user-attachments/assets/96e4b761-5393-4882-bfe8-a9819da10792" />
+<img width="600" height="384" alt="image" src="https://github.com/user-attachments/assets/dc7b9097-448c-4367-92ce-5e672a5deae6" />
 <br/>
 
 Then we will follow our Baskets URL (`http://${MACHINE_IP}:55555/${BASKET_ID}`) and find another service, **Maltrail** on **Version 0.53**!
