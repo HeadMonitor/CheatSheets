@@ -5,9 +5,9 @@
 ---
 
 <p align="center">
-  <a href="https://github.com/HeadMonitor/CheatSheets/blob/main/HackTheBoxWriteups/Era.md" >
-    <img width="100" alt="fcd00b2542a936e4281ba19e0bd0b025" src="https://github.com/user-attachments/assets/ac9cfde5-fccc-4bad-a6f6-a11e8770a9ea" />
+  <a href="https://github.com/HeadMonitor/CheatSheets/blob/main/HackTheBoxWriteups/Sau.md" >
+    <img width="100" alt="SauIcon" src="https://github.com/user-attachments/assets/ffbc035e-6ca0-4a35-a7a9-dcbc44b04f7b" />
     <br>
   </a>
-    <strong>Era</strong>
+    <strong>Sau</strong>
 </p>
