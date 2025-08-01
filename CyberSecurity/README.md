@@ -11,6 +11,13 @@
       <strong>nmap</strong>
     </td>
     <td align="center">
+      <a href="https://github.com/peass-ng/PEASS-ng">
+        <img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/1fe734ea-6baf-4e1e-87fd-e6d659bca83f" />
+      </a>
+      <br />
+      <strong>PEASS-ng</strong>
+    </td>
+    <td align="center">
       <a href="https://github.com/hashcat/hashcat">
         <img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/ecf6601d-265a-45a7-ad6e-8f89a4e51c63" />
       </a>
@@ -36,4 +43,3 @@
 
 ## Useful Sources
 - [SecLists](https://github.com/danielmiessler/SecLists) by [Daniel Miessler](https://github.com/danielmiessler)
-- [PEASS-ng](https://github.com/peass-ng/PEASS-ng) by [Peass-ng](https://github.com/peass-ng)
