@@ -15,7 +15,7 @@
         <img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/ecf6601d-265a-45a7-ad6e-8f89a4e51c63" />
       </a>
       <br />
-      <strong>Sau</strong>
+      <strong>hashcat</strong>
     </td>
     <td align="center">
       <a href="https://github.com/ffuf/ffuf">
