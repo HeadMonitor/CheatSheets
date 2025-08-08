@@ -50,4 +50,4 @@
 
 ## Useful Sources
 - [SecLists](https://github.com/danielmiessler/SecLists) by [Daniel Miessler](https://github.com/danielmiessler)
-- [GTFOBIns](https://gtfobins.github.io/) by [GTFOBins](https://github.com/GTFOBins)
+- [GTFOBins](https://gtfobins.github.io/) by [GTFOBins](https://github.com/GTFOBins)
