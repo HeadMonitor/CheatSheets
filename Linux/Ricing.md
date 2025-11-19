@@ -8,3 +8,8 @@
 ## Compositors
 - [Hyprland](https://hypr.land)
 - [Sway](https://swaywm.org/)
+
+## Widget Toolkits
+- [Quickshell](https://quickshell.org/)
+- [ElKowars Wacky Widgets](https://github.com/elkowar/eww)
+- [Waybar](https://github.com/Alexays/Waybar)
