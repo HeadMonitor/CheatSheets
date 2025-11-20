@@ -5,9 +5,6 @@ Various Cheat Sheets for various CS stuff.
 - [CyberSecurity](https://github.com/HeadMonitor/CheatSheets/tree/main/CyberSecurity) <br/>
   Cheatsheets for CyberSecurity.
 
-- [HackTheBoxWriteups](https://github.com/HeadMonitor/CheatSheets/tree/main/HackTheBoxWriteups) <br/>
-  Unofficial **Hack The Box** Writeups by HeadMonitor.
-
 - [Linux](https://github.com/HeadMonitor/CheatSheets/tree/main/Linux) <br/>
   Cheatsheets for Linux.
 
