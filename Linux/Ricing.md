@@ -19,3 +19,7 @@ A Linux Compositor is the system component that draws and manages everything you
 - [Quickshell](https://quickshell.org/)
 - [ElKowars Wacky Widgets](https://github.com/elkowar/eww)
 - [Waybar](https://github.com/Alexays/Waybar)
+
+---
+
+You can get some inspiration on [r/unixporn](https://www.reddit.com/r/unixporn/).
