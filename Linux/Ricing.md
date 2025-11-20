@@ -11,11 +11,20 @@ A Linux Compositor is the system component that draws and manages everything you
 - [Hyprland](https://hypr.land)
 
 ## Desktop Environments
-- [KDE Plasma](https://kde.org/plasma-desktop/)
-- [GNOME](https://www.gnome.org/)
-- [Cinnamon](https://projects.linuxmint.com/cinnamon/)
+A desktop environment is the complete graphical workspace. It bundles the components that form the user interface. They also come with other apps like Settings, so you can customize your system from a GUI without commands.
+
+- [KDE Plasma](https://kde.org/plasma-desktop/) <br/>
+  This is the most Customizable option. KDE let's you customize almost everything and looks awesome.
+  
+- [GNOME](https://www.gnome.org/) <br/>
+  GNOME is the simple and most popular choice due to it's use on Ubuntu. It is not as customizable as KDE but can be configured via Plugins.
+
+- [Cinnamon](https://projects.linuxmint.com/cinnamon/) <br/>
+  Cinnamon is developed by Linux Mint and is a choice in between KDE's customization and GNOME's simplicity.
 
 ## Widget Toolkits
+Want to create some Widget for your Desktop? Here are some popular options!
+
 - [Quickshell](https://quickshell.org/)
 - [ElKowars Wacky Widgets](https://github.com/elkowar/eww)
 - [Waybar](https://github.com/Alexays/Waybar)
